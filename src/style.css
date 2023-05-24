@@ -1,0 +1,24 @@
+h2 {
+  color: #55a2d2;
+}
+p {
+  font-size: 20px;
+  font-weight: 900;
+}
+#city {
+  color: #22424a;
+  font-size: 40px;
+}
+.container {
+  margin: 50px 400px;
+}
+#search {
+  position: fixed;
+  right: 500px;
+  top: 65px;
+}
+#current {
+  position: fixed;
+  right: 400px;
+  top: 65px;
+}
