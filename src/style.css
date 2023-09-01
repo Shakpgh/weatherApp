@@ -67,3 +67,8 @@ li::first-letter {
   line-height: 1;
   font-weight: 400;
 }
+#icon {
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
