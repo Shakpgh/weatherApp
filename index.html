@@ -18,11 +18,25 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="search" class="btn btn-primary" />
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1 id="city">Tehran</h1>
             <ul>
-              <li>Monday 11:38</li>
-              <li>clear</li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -34,15 +48,15 @@
                   id="icon"
                 />
                 <div>
-                  <strong id="temperature">10</strong
+                  <strong id="temperature"></strong
                   ><span class="units">°C | <a href="#">℉</a></span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: 70%</li>
-                <li>Wind: 2 km/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
