@@ -29,6 +29,7 @@ function displayWeather(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
@@ -37,7 +38,17 @@ function displayWeather(response) {
   dateElement.innerHTML = formatDate(response.data.time);
   iconElement.setAttribute("src", response.data.condition.icon_url);
 }
-let city = "Berlin";
-let apiKey = "1f0f26c46a2b80fo6314e3374afct3a8";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayWeather);
+function search(city) {
+  let apiKey = "1f0f26c46a2b80fo6314e3374afct3a8";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Berlin");
