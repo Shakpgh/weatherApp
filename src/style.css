@@ -76,3 +76,9 @@ li::first-letter {
   text-align: center;
   margin-top: -20px;
 }
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.minT {
+  color: #9e9c9c;
+}
